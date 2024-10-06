@@ -1,6 +1,8 @@
 package org.ME.Learning;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class Dev {
 
 
