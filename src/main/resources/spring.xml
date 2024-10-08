@@ -1,0 +1,17 @@
+
+
+<!--we already have the container , but if you want spring to create the object u have to mention that here -->
+<!--you have to add def for beans -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="dev" class ="org.ME.Learning.Dev">
+    </bean>
+<!--    <bean id="dev1" class ="org.ME.Learning.Dev">-->
+<!--    </bean> this will create another dev class cuz they have different id -->
+<!--inside beans we can add multiple single bean-->
+    <bean id="lap" class ="org.ME.Learning.Laptop">
+    </bean>
+
+</beans>
