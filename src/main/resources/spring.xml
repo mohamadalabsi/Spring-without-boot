@@ -7,12 +7,16 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="dev" class ="org.ME.Learning.Dev">
-<!--        <property name="age" value="22"></property>-->
-<!--        this is for cals Dev but id =dev so if we have multiple Dev classes they do not have the same values -->
 
-        <constructor-arg value="70" />
-<!--        <constructor-arg index="0" value="70" />   here if you want to specify the attribute -->
+<!--        <property name="age" value="22"></property>-->
+<!--        this is for class Dev but id =dev so if we have multiple Dev classes they do not have the same values  , setter injection-->
+
+<!--        <constructor-arg value="70" />-->
+<!--        <constructor-arg index="0" value="70" />   here if you want to specify the attribute  , constructor injection -->
 <!--        <constructor-arg name="age" value="70" />-->
+
+        <!--now injection but for laptop and no a regular value-->
+        
     </bean>
 <!--    <bean id="dev1" class ="org.ME.Learning.Dev">-->
 <!--    </bean> this will create another dev class cuz they have different id -->
