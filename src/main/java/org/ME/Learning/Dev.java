@@ -34,8 +34,13 @@ public class Dev {
         return age;
     }
 
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
+    }
 
-
+    public Laptop getLaptop() {
+        return laptop;
+    }
 
     public  void build(){
         System.out.println("Hello World");

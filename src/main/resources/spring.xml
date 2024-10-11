@@ -16,7 +16,8 @@
 <!--        <constructor-arg name="age" value="70" />-->
 
         <!--now injection but for laptop and no a regular value-->
-        
+<!--        <property name="laptop" ref="lap"></property>-->
+
     </bean>
 <!--    <bean id="dev1" class ="org.ME.Learning.Dev">-->
 <!--    </bean> this will create another dev class cuz they have different id -->
