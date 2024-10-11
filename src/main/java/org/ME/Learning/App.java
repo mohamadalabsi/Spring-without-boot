@@ -28,9 +28,12 @@ public class App
 
 
 //        constructor injection
-        System.out.println(dev.getAge());
+//        System.out.println(dev.getAge());
 
 
+
+//        injection but for laptop , setter and constructor
+        dev.build();
 
 
     }

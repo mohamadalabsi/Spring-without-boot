@@ -15,8 +15,9 @@
 <!--        <constructor-arg index="0" value="70" />   here if you want to specify the attribute  , constructor injection -->
 <!--        <constructor-arg name="age" value="70" />-->
 
-        <!--now injection but for laptop and no a regular value-->
+        <!--now injection but for laptop and no a regular value ,setter -->
 <!--        <property name="laptop" ref="lap"></property>-->
+        <constructor-arg ref="lap"></constructor-arg>
 
     </bean>
 <!--    <bean id="dev1" class ="org.ME.Learning.Dev">-->

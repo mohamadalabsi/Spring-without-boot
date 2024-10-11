@@ -10,11 +10,11 @@ public class Dev {
         System.out.println("Dev Constructor");
   }
 
-//    constructor injection
-    public Dev(int age) {
-        this.age = age;
-        System.out.println("Dev 1 Constructor");
-    }
+//    constructor injection for normal attribute
+//    public Dev(int age) {
+//        this.age = age;
+//        System.out.println("Dev 1 Constructor");
+//    }
 
     private Laptop laptop;
 
@@ -34,6 +34,8 @@ public class Dev {
         return age;
     }
 
+
+//    setter injection for laptop
     public void setLaptop(Laptop laptop) {
         this.laptop = laptop;
     }
@@ -42,8 +44,16 @@ public class Dev {
         return laptop;
     }
 
+//    constructor injection for laptop
+    public Dev(Laptop laptop) {
+        this.laptop = laptop;
+        System.out.println("Dev 1 Constructor");
+    }
+
+
     public  void build(){
         System.out.println("Hello World");
+        laptop.Build();
     }
 
 }
