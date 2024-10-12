@@ -6,8 +6,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="dev" class ="org.ME.Learning.Dev">
+<!--    <bean id="dev" class ="org.ME.Learning.Dev" autowire="byName">   byName here instead of property if the bean has the same  name of the var in the class dev and the bean name should be unique-->
+    <bean id="dev" class ="org.ME.Learning.Dev" autowire="byType">  <!-- byType here instead of property but make sure here to have just one bean , that means we are using computer interface and now here we have desktop and laptop bean and this is wrong , unless you add primary to the bean -->
 
+<!--!        regular value -->
 <!--        <property name="age" value="22"></property>-->
 <!--        this is for class Dev but id =dev so if we have multiple Dev classes they do not have the same values  , setter injection-->
 
@@ -15,12 +17,22 @@
 <!--        <constructor-arg index="0" value="70" />   here if you want to specify the attribute  , constructor injection -->
 <!--        <constructor-arg name="age" value="70" />-->
 
-        <!--now injection but for laptop and no a regular value ,setter -->
+        <!--!now injection but for laptop and no a regular value ,setter and constructor -->
 <!--        <property name="laptop" ref="lap"></property>-->
-        <constructor-arg ref="lap"></constructor-arg>
+<!--        <constructor-arg ref="lap"></constructor-arg>-->
 
+<!--!   Auto wiring     -->
+<!--        <property name="comp" ref="com"></property>-->
+<!-- the name here referring to dev var com and ref is a reference to the name of bean or id -->
+<!--        if you remove it and do not add autowire up there it will give an Null error -->
     </bean>
-<!--    <bean id="dev1" class ="org.ME.Learning.Dev">-->
+
+
+    <bean id ="com" class="org.ME.Learning.Desktop" primary="true"></bean>
+<!--    if two beans have the same id it will give an error -->
+
+
+    <!--    <bean id="dev1" class ="org.ME.Learning.Dev">-->
 <!--    </bean> this will create another dev class cuz they have different id -->
 <!--inside beans we can add multiple single bean-->
     <bean id="lap" class ="org.ME.Learning.Laptop">

@@ -1,12 +1,12 @@
 package org.ME.Learning;
 
-public class Laptop {
+public class Laptop implements Computer {
 
       Laptop(){
         System.out.println("Laptop Constructor");
     }
-    public void  Build(){
-        System.out.println("Building");
+    public void  compile(){
+        System.out.println("compiling Laptop");
 
     }
 

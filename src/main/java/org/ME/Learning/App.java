@@ -33,8 +33,10 @@ public class App
 
 
 //        injection but for laptop , setter and constructor
-        dev.build();
+//        dev.build();
 
+//        Auto wiring
+          dev.build();
 
     }
 }
